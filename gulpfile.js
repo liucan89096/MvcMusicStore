@@ -3,8 +3,8 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('auto', function () {
 	browserSync.init({
-		proxy: "localhost:10000", // makes a proxy for localhost:8080
-		port: "20000",
+		proxy: "localhost:10010", // makes a proxy for localhost:8080
+		port: "20010",
     });
 	
 	gulp.watch([
