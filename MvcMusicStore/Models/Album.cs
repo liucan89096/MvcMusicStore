@@ -12,7 +12,7 @@ namespace MvcMusicStore.Models
     [Bind(Exclude = "AlbumId")]
     public class Album
     {
-        [ScaffoldColumn(false)]
+        [ScaffoldColumn(true)]
         public int AlbumId { get; set; }
 
         [DisplayName("Genre")]
