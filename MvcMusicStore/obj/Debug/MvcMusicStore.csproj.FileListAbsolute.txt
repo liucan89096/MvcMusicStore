@@ -184,3 +184,5 @@ C:\Max\selflearn\MvcMusicStore\MvcMusicStore\bin\System.Web.Helpers.xml
 C:\Max\selflearn\MvcMusicStore\MvcMusicStore\bin\System.Web.Mvc.xml
 C:\Max\selflearn\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
 C:\Max\selflearn\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb
+C:\Max\selflearn\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+C:\Max\selflearn\MvcMusicStore\MvcMusicStore\bin\Microsoft.Web.Infrastructure.dll

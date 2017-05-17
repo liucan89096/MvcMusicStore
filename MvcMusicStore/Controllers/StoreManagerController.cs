@@ -10,11 +10,11 @@ using MvcMusicStore.Models;
 
 namespace MvcMusicStore.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    [Authorize]
     public class StoreManagerController : Controller
     {
         private MusicStoreEntities db = new MusicStoreEntities();
-
+        [AllowAnonymous]
         // GET: StoreManager
         public ActionResult Index()
         {
@@ -36,7 +36,7 @@ namespace MvcMusicStore.Controllers
             }
             return View(album);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: StoreManager/Create
         public ActionResult Create()
         {

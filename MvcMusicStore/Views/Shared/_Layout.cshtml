@@ -7,6 +7,9 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.js"></script>
 </head>
 <body>
     <div class="navbar navbar-default">
@@ -19,10 +22,13 @@
                 </button>
                 @Html.ActionLink("MAX's MUSIC STORE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/Store">Store</a></li>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Store", "Index", "store")</li>
+                    <li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
+                    <li>@Html.ActionLink("StoreManager", "Index", "storemanager")</li>
+                    <li>@Html.ActionLink("LogIn", "LogOn", "account")</li>
                 </ul>
             </div>
         </div>
@@ -30,7 +36,14 @@
 
     <div class="bodywrap">
         <div class="container">
-            @RenderBody()
+            <div class="row">
+                <div class="col-md-4">
+                    @{Html.RenderAction("GenreMenu", "Store");}
+                </div>
+                <div class="col-md-8">
+                    @RenderBody()
+                </div>
+            </div>
         </div>
     </div>
 
